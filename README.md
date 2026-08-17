@@ -8,11 +8,9 @@ Repository containing the projects developed by me in the course Introduction to
 
 The course introduces computational methods for solving and modeling physics problems, with an emphasis on scientific programming, numerical algorithms, simulation, and data analysis. The repository is organized into five projects:
 
-## Project 1 — Scientific Programming, Visualization, and Data Analysis
+## Project 1 — Introduction to programming
 
-Introduction to the scientific programming language used in the course, preferably FORTRAN. The project covers basic techniques for visualization and data analysis, using the simulation of radioactive decay with a random-number generator as an example.
-
-**Topics:** FORTRAN, random-number generation, radioactive decay, simulation, data visualization, and data analysis.
+Introduction to scientific programming in FORTRAN-77 through a set of practical computational tasks. The project develops fundamental programming and algorithmic skills, including numerical calculations, vector and matrix operations, file input/output, sorting, iterative methods, numerical precision, permutation generation, determinant evaluation, and the solution of linear systems using Cramer’s rule. It also introduces basic scientific data generation and visualization, including the computation and graphical analysis of geometric quantities in arbitrary dimensions.
 
 ## Project 2 — Numerical Methods
 
