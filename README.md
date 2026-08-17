@@ -1,5 +1,7 @@
 # Intro-to-Computational-Physics-USP
 
+![FORTRAN-77](https://img.shields.io/badge/FORTRAN--77-734F96?style=for-the-badge&logo=fortran&logoColor=white)
+
 Repository containing the projects developed by me in the course Introduction to Computational Physics (7600017), offered by the São Carlos Institute of Physics (IFSC-USP).
 
 **Professor and author of the exercises:** José Abel Hoyos Neto
