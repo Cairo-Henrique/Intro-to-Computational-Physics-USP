@@ -12,26 +12,26 @@ The course introduces computational methods for solving and modeling physics pro
 
 Introduction to scientific programming in FORTRAN-77 through a set of practical computational tasks. The project develops fundamental programming and algorithmic skills, including numerical calculations, vector and matrix operations, file input/output, sorting, iterative methods, numerical precision, permutation generation, determinant evaluation, and the solution of linear systems using Cramer’s rule. It also introduces basic scientific data generation and visualization, including the computation and graphical analysis of geometric quantities in arbitrary dimensions.
 
-## Project 2 — Numerical Methods
+## Project 2 — Random Systems
 
-Implementation and application of basic numerical methods, including numerical integration, numerical differentiation, and methods for finding roots of algebraic equations.
+Study and computational simulation of random systems, including the generation and analysis of random numbers and their applications to physical problems.
 
-**Topics:** numerical integration, numerical differentiation, root-finding, and numerical algorithms.
+**Topics:** random numbers, probability, statistical analysis, random systems, and computational simulation.
 
-## Project 3 — Differential Equations and Physical Modeling
+## Project 3 — Numerical Calculus
 
-Implementation of numerical methods for solving differential equations, including Euler, Euler-Cromer, Runge-Kutta, Verlet, and Numerov methods. The methods are applied to physical models involving motion in viscous media, gravitational forces, and the three-body problem.
+Implementation and application of numerical methods for the approximation of mathematical quantities and the numerical solution of physical problems.
 
-**Topics:** differential equations, Euler, Euler-Cromer, Runge-Kutta, Verlet, Numerov, viscous motion, gravitation, and the three-body problem.
+**Topics:** numerical methods, approximation, numerical calculation, integration, differentiation, and computational algorithms.
 
-## Project 4 — Population Dynamics and Nonlinear Systems
+## Project 4 — 2D Motion
 
-Study of population dynamics through the logistic map, including the construction and analysis of bifurcation diagrams and examples of fractal structures.
+Computational study of two-dimensional motion through the numerical solution of the equations governing the trajectory of physical systems.
 
-**Topics:** logistic map, population dynamics, bifurcation diagrams, nonlinear dynamics, and fractals.
+**Topics:** two-dimensional motion, trajectories, numerical methods, kinematics, and computational modeling.
 
-## Project 5 — Oscillations, Chaos, and Fourier Analysis
+## Project 5 — Kepler's Problem
 
-Study of damped and forced oscillatory systems, including the chaotic pendulum, phase-space analysis, and Fourier analysis.
+Computational study of Kepler's problem through the numerical simulation of gravitational motion and the analysis of orbital trajectories.
 
-**Topics:** damped oscillations, forced oscillations, chaotic pendulum, phase space, and Fourier analysis.
+**Topics:** Kepler's problem, gravitational motion, orbital dynamics, trajectories, and numerical simulation.
