@@ -8,32 +8,30 @@ Repository containing the projects developed by me in the course Introduction to
 
 The course introduces computational methods for solving and modeling physics problems, with an emphasis on scientific programming, numerical algorithms, simulation, and data analysis. The repository is organized into five projects:
 
-## Project 1 — Scientific Programming, Visualization, and Data Analysis
+## Project 1 — Introduction to programming
 
-Introduction to the scientific programming language used in the course, preferably FORTRAN. The project covers basic techniques for visualization and data analysis, using the simulation of radioactive decay with a random-number generator as an example.
+Introduction to scientific programming in FORTRAN-77 through a set of practical computational tasks. The project develops fundamental programming and algorithmic skills, including numerical calculations, vector and matrix operations, file input/output, sorting, iterative methods, numerical precision, permutation generation, determinant evaluation, and the solution of linear systems using Cramer’s rule. It also introduces basic scientific data generation and visualization, including the computation and graphical analysis of geometric quantities in arbitrary dimensions.
 
-**Topics:** FORTRAN, random-number generation, radioactive decay, simulation, data visualization, and data analysis.
+## Project 2 — Random Systems
 
-## Project 2 — Numerical Methods
+Study and computational simulation of random systems, including the generation and analysis of random numbers and their applications to physical problems.
 
-Implementation and application of basic numerical methods, including numerical integration, numerical differentiation, and methods for finding roots of algebraic equations.
+**Topics:** random numbers, probability, statistical analysis, random systems, and computational simulation.
 
-**Topics:** numerical integration, numerical differentiation, root-finding, and numerical algorithms.
+## Project 3 — Numerical Calculus
 
-## Project 3 — Differential Equations and Physical Modeling
+Implementation and application of numerical methods for the approximation of mathematical quantities and the numerical solution of physical problems.
 
-Implementation of numerical methods for solving differential equations, including Euler, Euler-Cromer, Runge-Kutta, Verlet, and Numerov methods. The methods are applied to physical models involving motion in viscous media, gravitational forces, and the three-body problem.
+**Topics:** numerical methods, approximation, numerical calculation, integration, differentiation, and computational algorithms.
 
-**Topics:** differential equations, Euler, Euler-Cromer, Runge-Kutta, Verlet, Numerov, viscous motion, gravitation, and the three-body problem.
+## Project 4 — 2D Motion
 
-## Project 4 — Population Dynamics and Nonlinear Systems
+Computational study of two-dimensional motion through the numerical solution of the equations governing the trajectory of physical systems.
 
-Study of population dynamics through the logistic map, including the construction and analysis of bifurcation diagrams and examples of fractal structures.
+**Topics:** two-dimensional motion, trajectories, numerical methods, kinematics, and computational modeling.
 
-**Topics:** logistic map, population dynamics, bifurcation diagrams, nonlinear dynamics, and fractals.
+## Project 5 — Kepler's Problem
 
-## Project 5 — Oscillations, Chaos, and Fourier Analysis
+Computational study of Kepler's problem through the numerical simulation of gravitational motion and the analysis of orbital trajectories.
 
-Study of damped and forced oscillatory systems, including the chaotic pendulum, phase-space analysis, and Fourier analysis.
-
-**Topics:** damped oscillations, forced oscillations, chaotic pendulum, phase space, and Fourier analysis.
+**Topics:** Kepler's problem, gravitational motion, orbital dynamics, trajectories, and numerical simulation.
