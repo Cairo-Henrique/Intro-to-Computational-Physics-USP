@@ -6,32 +6,24 @@ Repository containing the projects developed by me in the course Introduction to
 
 **Professor and author of the exercises:** José Abel Hoyos Neto
 
-The course introduces computational methods for solving and modeling physics problems, with an emphasis on scientific programming, numerical algorithms, simulation, and data analysis. The repository is organized into five projects:
+The course introduces computational methods for solving and modeling physics problems, with an emphasis on scientific programming, numerical algorithms, stochastic processes, numerical integration, differential equations, and computational simulation. The repository is organized into five projects:
 
 ## Project 1 — Introduction to programming
 
-Introduction to scientific programming in FORTRAN-77 through a set of practical computational tasks. The project develops fundamental programming and algorithmic skills, including numerical calculations, vector and matrix operations, file input/output, sorting, iterative methods, numerical precision, permutation generation, determinant evaluation, and the solution of linear systems using Cramer’s rule. It also introduces basic scientific data generation and visualization, including the computation and graphical analysis of geometric quantities in arbitrary dimensions.
+Introduction to scientific programming in FORTRAN-77 through a set of practical computational tasks. The project develops fundamental programming and algorithmic skills, including numerical calculations, vector and matrix operations, file input/output, sorting, iterative methods, numerical precision, permutation generation, determinant evaluation, and the solution of linear systems using Cramer's rule. It also introduces scientific computation and data visualization through the calculation and graphical analysis of geometric quantities in arbitrary dimensions.
 
 ## Project 2 — Random Systems
 
-Study and computational simulation of random systems, including the generation and analysis of random numbers and their applications to physical problems.
-
-**Topics:** random numbers, probability, statistical analysis, random systems, and computational simulation.
+Computational study of stochastic systems using pseudorandom number generators and statistical methods. The project explores the generation and analysis of random sequences, Monte Carlo integration, statistical sampling, and the central limit theorem. It also investigates stochastic models of physical phenomena, including radioactive decay and random walks in one and two dimensions, examining probability distributions, mean-square displacement, diffusion, and entropy.
 
 ## Project 3 — Numerical Calculus
 
-Implementation and application of numerical methods for the approximation of mathematical quantities and the numerical solution of physical problems.
+Implementation and analysis of numerical methods for differentiation, integration, and root-finding. The project explores finite-difference approximations of derivatives using different orders and stencils, numerical quadrature methods such as the trapezoidal, Simpson's, and Boole's rules, and iterative algorithms for solving nonlinear equations, including bisection, Newton-Raphson, and the secant method. Numerical accuracy, truncation errors, and convergence are investigated through systematic variations of the numerical step size.
 
-**Topics:** numerical methods, approximation, numerical calculation, integration, differentiation, and computational algorithms.
+## Project 4 — Differential Equations
 
-## Project 4 — 2D Motion
+Computational study of ordinary differential equations arising from Newtonian mechanics, using the Euler and Euler-Cromer numerical integration methods. The project investigates one-dimensional motion with air resistance, two-dimensional projectile trajectories under drag forces, and the dynamics of simple, damped, and periodically forced pendulums. It further explores nonlinear oscillations, phase-space trajectories, Poincaré sections, limit cycles, chaotic dynamics, and Lyapunov exponents, as well as dynamic stabilization in a vertically driven pendulum.
 
-Computational study of two-dimensional motion through the numerical solution of the equations governing the trajectory of physical systems.
+## Project 5 — Kepler's Laws and the Three-Body Problem
 
-**Topics:** two-dimensional motion, trajectories, numerical methods, kinematics, and computational modeling.
-
-## Project 5 — Kepler's Problem
-
-Computational study of Kepler's problem through the numerical simulation of gravitational motion and the analysis of orbital trajectories.
-
-**Topics:** Kepler's problem, gravitational motion, orbital dynamics, trajectories, and numerical simulation.
+Computational investigation of gravitational dynamics and celestial mechanics through the numerical simulation of orbital systems. The project implements the Euler-Cromer and Verlet integration methods to study circular and elliptical orbits, analyze energy conservation and orbital stability, and numerically verify Kepler's three laws. It extends the analysis to the gravitational interaction between the Sun, Earth, and Jupiter, exploring orbital perturbations, planetary stability, and asteroid trajectories associated with Kirkwood gaps. The project also investigates three-body choreographies, including Lagrange's equilateral configuration and the periodic figure-eight orbit.
