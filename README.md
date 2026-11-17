@@ -6,7 +6,7 @@ Repository containing the projects developed by me in the course Introduction to
 
 **Professor and author of the exercises:** José Abel Hoyos Neto
 
-The course introduces computational methods for solving and modeling physics problems, with an emphasis on scientific programming, numerical algorithms, stochastic processes, numerical integration, differential equations, and computational simulation. The repository is organized into five projects:
+The course develops practical skills in scientific computing, numerical programming, and computational problem-solving through hands-on projects in FORTRAN-77. It covers algorithm development, numerical methods, mathematical modeling, stochastic simulations, data analysis, and the computational solution of differential equations. The repository is organized into five projects:
 
 ## Project 1 — Introduction to programming
 
