@@ -57,3 +57,17 @@ The notebook covers Projects 2, 4, and 5, providing a complementary environment 
 ├── projects-data-visualization.ipynb
 └── README.md
 ```
+
+## Compiling and Running on Linux
+
+To compile the program using `gfortran`:
+
+```bash
+gfortran program.f -o program.exe
+```
+
+To run the compiled executable:
+
+```bash
+./program.exe
+```
