@@ -9,7 +9,20 @@ Repository containing the projects developed by me in the course Introduction to
 
 The course develops practical skills in scientific computing, numerical programming, and computational problem-solving through hands-on projects in FORTRAN-77. It covers algorithm development, numerical methods, mathematical modeling, stochastic simulations, data analysis, and the computational solution of differential equations.
 
+## Repository Structure
+
 The repository is organized into five computational projects and a complementary Jupyter notebook for scientific data visualization and analysis.
+
+```text
+.
+├── projeto-1/
+├── projeto-2/
+├── projeto-3/
+├── projeto-4/
+├── projeto-5/
+├── projects-data-visualization.ipynb
+└── README.md
+```
 
 ## Projects
 
@@ -44,19 +57,6 @@ Computational investigation of gravitational dynamics and celestial mechanics th
 A collection of Python scripts for visualizing and analyzing the numerical results generated throughout the computational projects. Using NumPy and Matplotlib, the notebook processes data files produced by the FORTRAN-77 programs and generates graphical representations of statistical systems, numerical solutions of differential equations, and gravitational dynamics. It includes visualizations of random walks, probability distributions, particle trajectories, pendulum dynamics, phase-space diagrams, orbital motion, and three-body systems.
 
 The notebook covers Projects 2, 4, and 5, providing a complementary environment for graphical analysis and interpretation of the numerical simulations.
-
-## Repository Structure
-
-```text
-.
-├── projeto-1/
-├── projeto-2/
-├── projeto-3/
-├── projeto-4/
-├── projeto-5/
-├── projects-data-visualization.ipynb
-└── README.md
-```
 
 ## Compiling and Running on Linux
 
