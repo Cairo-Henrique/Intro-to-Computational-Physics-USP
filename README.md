@@ -47,8 +47,6 @@ The notebook covers Projects 2, 4, and 5, providing a complementary environment 
 
 ## Repository Structure
 
-The repository is organized into five computational projects and a Jupyter notebook for the visualization and analysis of numerical results.
-
 ```text
 .
 ├── projeto-1/
