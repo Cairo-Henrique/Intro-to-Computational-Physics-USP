@@ -1,0 +1,145 @@
+      program tarefa3a
+      ! O problema de três corpos: Sol, Terra e Júpiter com método de Verlet.
+      ! Utiliza-se a 3a Lei de Kepler GM⊙ = 4pi^2 UA^3 ano^(−2).
+      ! Grandezas adimensionais rho = r/UA, tau = 2pi*t/ano, v = v/(2pi*UA/ano).
+      ! Toma-se o Sol como origem estática e Terra e Júpiter como corpos em órbita.
+
+      implicit none
+
+      character(30) filename
+      real*8 taumax, dtau
+      real*8 mu_terra, mu_jupiter
+      real*8 rx_terra(200000), ry_terra(200000), vx_terra, vy_terra
+      real*8 rx_jupiter(200000), ry_jupiter(200000), 
+     & vx_jupiter, vy_jupiter
+      real*8 pi
+      parameter (pi = 3.14159265358979323d0)
+
+      ! Massas adimensionais dos corpos
+      mu_terra = 3.003d-6 ! massa da Terra
+      mu_jupiter = 9.545d-4 ! massa de Júpiter
+
+      ! Condições iniciais adimensionais
+      ! Terra
+      rx_terra(1) = 1.0d0 ! posição inicial no eixo x
+      ry_terra(1) = 0.0d0 ! posição inicial no eixo y
+      vx_terra = 0.0d0 ! velocidade inicial no eixo x
+      vy_terra = 1.0d0 ! velocidade inicial no eixo y
+      ! Júpiter
+      rx_jupiter(1) = 5.2d0 ! posição inicial no eixo x
+      ry_jupiter(1) = 0.0d0 ! posição inicial no eixo y
+      vx_jupiter = 0.0d0 ! velocidade inicial no eixo x
+      vy_jupiter = 0.44d0 ! velocidade inicial no eixo y
+
+      ! Parâmetros da simulação
+      taumax = 30.0d0 * 2.0d0 * pi ! 30 anos de simulação
+      dtau = 0.001d0 ! passo de tempo adimensional
+
+      ! Nome do arquivo de saída
+      filename = 'tarefa-3a-saida-1.dat'
+
+      ! Chamada da subrotina de simulação
+      call simulacao_orbita(
+     &     filename, rx_terra, ry_terra, vx_terra, vy_terra,
+     &     rx_jupiter, ry_jupiter, vx_jupiter, vy_jupiter,
+     &     mu_terra, mu_jupiter, dtau, taumax)
+
+      end program
+
+      subroutine simulacao_orbita(
+     &   filename, rx_terra, ry_terra, vx_terra, vy_terra,
+     &   rx_jupiter, ry_jupiter, vx_jupiter, vy_jupiter,
+     &   mu_terra, mu_jupiter, dtau, taumax)
+      ! Simulação via método de Verlet
+      ! Retorna tau, rx, ry da Terra e de Júpiter
+      implicit none
+      character(30) filename
+      real*8 rx_sol, ry_sol
+      parameter (rx_sol = 0.0d0, ry_sol = 0.0d0) ! Sol na origem
+      real*8 rx_terra(200000), ry_terra(200000), vx_terra, vy_terra
+      real*8 rx_jupiter(200000), ry_jupiter(200000), 
+     & vx_jupiter, vy_jupiter
+      real*8 tau, dtau, taumax
+      integer*4 i, nsteps
+      real*8 mu_jupiter, mu_terra
+      real*8 aceleracao
+
+      ! Número de passos da simulação
+      nsteps = int(taumax/dtau)
+
+      ! Para o método de Verlet, precisamos de uma segunda posição inicial
+      ! Calculamos os valores de rx(1), ry(1), vx(1), vy(1)
+      ! por meio do método de Euler para calcular a posição do passo i=2
+      open(10, file=filename) ! Posições e velocidades
+
+      write(10,*) 0.0d0, rx_terra(1), ry_terra(1), 
+     &   rx_jupiter(1), ry_jupiter(1)
+
+      rx_terra(2) = rx_terra(1) + vx_terra*dtau
+      ry_terra(2) = ry_terra(1) + vy_terra*dtau
+      rx_jupiter(2) = rx_jupiter(1) + vx_jupiter*dtau
+      ry_jupiter(2) = ry_jupiter(1) + vy_jupiter*dtau
+
+      do i = 2, nsteps
+
+        ! Atualização das posições da Terra
+        rx_terra(i+1) = 2.0d0*rx_terra(i) - rx_terra(i-1)
+     &       + aceleracao('x', rx_terra(i), ry_terra(i),
+     &         rx_sol, ry_sol)*dtau**2
+     &       + mu_jupiter*aceleracao('x',
+     &         rx_terra(i), ry_terra(i),
+     &         rx_jupiter(i), ry_jupiter(i))*dtau**2
+
+        ry_terra(i+1) = 2.0d0*ry_terra(i) - ry_terra(i-1)
+     &       + aceleracao('y', rx_terra(i), ry_terra(i),
+     &         rx_sol, ry_sol)*dtau**2
+     &       + mu_jupiter*aceleracao('y',
+     &         rx_terra(i), ry_terra(i),
+     &         rx_jupiter(i), ry_jupiter(i))*dtau**2
+
+        ! Atualização das posições de Júpiter
+        rx_jupiter(i+1) = 2.0d0*rx_jupiter(i)
+     &       - rx_jupiter(i-1)
+     &       + aceleracao('x', rx_jupiter(i), ry_jupiter(i),
+     &         rx_sol, ry_sol)*dtau**2
+     &       + mu_terra*aceleracao('x',
+     &         rx_jupiter(i), ry_jupiter(i),
+     &         rx_terra(i), ry_terra(i))*dtau**2
+
+        ry_jupiter(i+1) = 2.0d0*ry_jupiter(i)
+     &       - ry_jupiter(i-1)
+     &       + aceleracao('y', rx_jupiter(i), ry_jupiter(i),
+     &         rx_sol, ry_sol)*dtau**2
+     &       + mu_terra*aceleracao('y',
+     &         rx_jupiter(i), ry_jupiter(i),
+     &         rx_terra(i), ry_terra(i))*dtau**2
+
+        tau = (i-1)*dtau
+        write(10,*) tau, rx_terra(i), ry_terra(i), 
+     &   rx_jupiter(i), ry_jupiter(i)
+
+      end do
+
+      close(10)
+      end subroutine
+
+
+      function aceleracao(
+     &   componente, rx_corpo_1, ry_corpo_1, rx_corpo_2, ry_corpo_2)
+      ! Calcula a aceleração de um corpo devido à gravidade de outro corpo
+      ! componente: 'x' para x, 'y' para y
+      ! rx_corpo_1, ry_corpo_1: posição do corpo que sofre a aceleração
+      ! rx_corpo_2, ry_corpo_2: posição do corpo que exerce a força gravitacional
+      implicit none
+      character*1 componente
+      real*8 rx_corpo_1, ry_corpo_1, rx_corpo_2, ry_corpo_2
+      real*8 aceleracao, r
+      r = sqrt((rx_corpo_2 - rx_corpo_1)**2 + 
+     & (ry_corpo_2 - ry_corpo_1)**2)
+      if (componente .eq. 'x') then
+        aceleracao = - (rx_corpo_1 - rx_corpo_2) / r**3
+      else if (componente .eq. 'y') then
+        aceleracao = - (ry_corpo_1 - ry_corpo_2) / r**3
+      end if
+      return
+      end function
